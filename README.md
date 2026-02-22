@@ -38,7 +38,12 @@ npm run dev
 
 Then open the URL shown in terminal (typically `http://localhost:5173`).
 
-Note: API requests use a Vite dev proxy (`/api/...`) to avoid browser CORS issues with the remote PHP endpoint.
+Note: API requests use `/api/gettabledata`.
+- In local dev, Vite proxy forwards this to the remote PHP endpoint.
+- In Vercel production, `api/gettabledata.js` acts as a server-side proxy to avoid browser CORS.
+
+Routing note for Vercel:
+- `vercel.json` rewrites all SPA routes (like `/list`, `/chart`) to `index.html` so refresh/direct-open does not return 404.
 
 ## Production Build
 

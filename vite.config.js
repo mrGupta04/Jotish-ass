@@ -6,10 +6,10 @@ export default defineConfig({
   plugins: [react()],
   server: {
     proxy: {
-      '/api': {
+      '/api/gettabledata': {
         target: 'https://backend.jotish.in',
         changeOrigin: true,
-        rewrite: (path) => path.replace(/^\/api/, '/backend_dev'),
+        rewrite: () => '/backend_dev/gettabledata.php',
       },
     },
   },

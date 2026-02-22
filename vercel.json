@@ -1,0 +1,6 @@
+{
+  "rewrites": [
+    { "source": "/api/gettabledata", "destination": "/api/gettabledata" },
+    { "source": "/(.*)", "destination": "/index.html" }
+  ]
+}

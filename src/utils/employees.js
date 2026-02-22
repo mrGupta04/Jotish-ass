@@ -1,6 +1,4 @@
-const API_URL = import.meta.env.DEV
-  ? '/api/gettabledata.php'
-  : 'https://backend.jotish.in/backend_dev/gettabledata.php'
+const API_URL = '/api/gettabledata'
 
 const API_PAYLOAD = {
   username: 'test',
